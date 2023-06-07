@@ -130,6 +130,7 @@ appearance: none;
     color: #575753;
     justify-content: space-between;
 }
+<<<<<<< HEAD
 
 .footer__navi {
     flex-wrap: wrap;
@@ -157,3 +158,5 @@ a:hover {
 .sample img{
     width: 200px;
 }
+=======
+>>>>>>> origin/tadajin
