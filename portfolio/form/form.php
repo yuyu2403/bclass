@@ -32,14 +32,14 @@ $comment = str_replace("\n", "\t", $comment);
 if ($name == "") {
     error("名前が未入力です");
 }
-if ($gen == ""){
+if ($gen == "") {
     error("性別が未選択です");
 }
 if (!preg_match("/\w+@\w+/", $email)) {
     error("メールアドレスが不正です");
 }
-if ($job == ""){
-    error("職業が未選択です")
+if ($job == "") {
+    error("職業が未選択です");
 }
 if ($comment == "") {
     error("コメントが未入力です");
