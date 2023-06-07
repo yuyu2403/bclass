@@ -106,6 +106,7 @@ appearance: none;
     cursor: pointer;
 }
 
+<<<<<<< HEAD
 .footer{
     font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
     padding: 2rem;
@@ -116,3 +117,8 @@ appearance: none;
 
 }
 
+=======
+.sample img{
+    width: 200px;
+}
+>>>>>>> origin/tadajin
