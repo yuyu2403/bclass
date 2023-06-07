@@ -24,16 +24,17 @@
         <input type="submit" value="計算">
     </form>
 
+    <footer class="footer">
+        <a href="../index.html" class="footer__return">bclass TOPページへ</a>
+        <ul class="footer__navi flex">
+            <!-- <li><a href="../calc/calc.php">電卓</a></li> -->
+            <li><a href="../form/form.html">フォーム</a></li>
+            <li><a href="../gacha/gacha.php">ガチャ</a></li>
+            <li><a href="../game/game.php">ゲーム</a></li>
+        </ul>
+    </footer>
+
 </body>
-<footer class="footer">
-    <a href="../index.html" class="footer__return">bclass TOPページへ</a>
-    <ul class="footer__navi flex">
-        <!-- <li><a href="../calc/calc.php">電卓</a></li> -->
-        <li><a href="../form/form.html">フォーム</a></li>
-        <li><a href="../gacha/gacha.php">ガチャ</a></li>
-        <li><a href="../game/game.php">ゲーム</a></li>
-    </ul>
-</footer>
 
 </html>
 
