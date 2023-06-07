@@ -8,26 +8,30 @@ $toppage = "./form.html";
 #===========================================================
 #  入力情報の受け取りと加工
 #===========================================================
-$name = $_POST["name"];
-$gen = $_POST["gender"];
-$email = $_POST["email"];
-$job = $_POST["job"];
-$comment = $_POST["comment"];
 
-# 無効化
-$name  = htmlentities($name, ENT_QUOTES, "UTF-8");
-$gen = htmlentities($gen, ENT_QUOTES, "UTF-8");
-$email = htmlentities($email, ENT_QUOTES, "UTF-8");
-$job = htmlentities($job, ENT_QUOTES, "UTF-8");
-$comment = htmlentities($comment, ENT_QUOTES, "UTF-8");
+$name = $_POST["名前"];
+$email = $_POST["メール"];
+$job = $_POST["職業"];
+$comment = $_POST["お問い合わせ"];
+if (empty($_POST)) {
+    $gen = $_POST["性別"];
+    $skill = $_POST["スキル"];
 
-# 改行処理
-$name = str_replace("\r\n", "", $name);
-$email = str_replace("\r\n", "", $email);
-$comment = str_replace("\r\n", "\t", $comment);
-$comment = str_replace("\r", "\t", $comment);
-$comment = str_replace("\n", "\t", $comment);
+    # 無効化
+    $name  = htmlentities($name, ENT_QUOTES, "UTF-8");
+    $gen = htmlentities($gen, ENT_QUOTES, "UTF-8");
+    $email = htmlentities($email, ENT_QUOTES, "UTF-8");
+    $job = htmlentities($job, ENT_QUOTES, "UTF-8");
+    $skill = htmlentities($skill, ENT_QUOTES, "UTF-8");
+    $comment = htmlentities($comment, ENT_QUOTES, "UTF-8");
 
+    # 改行処理
+    $name = str_replace("\r\n", "", $name);
+    $email = str_replace("\r\n", "", $email);
+    $comment = str_replace("\r\n", "\t", $comment);
+    $comment = str_replace("\r", "\t", $comment);
+    $comment = str_replace("\n", "\t", $comment);
+}
 # 入力チェック
 if ($name == "") {
     error("名前が未入力です");
@@ -38,8 +42,11 @@ if ($gen == "") {
 if (!preg_match("/\w+@\w+/", $email)) {
     error("メールアドレスが不正です");
 }
-if ($job == "") {
+if ($job == "選択") {
     error("職業が未選択です");
+}
+if ($skill == "") {
+    error("スキルが未入力です");
 }
 if ($comment == "") {
     error("コメントが未入力です");
@@ -86,8 +93,8 @@ if ($comment == "") {
 #-----------------------------------------------------------
 function error($msg)
 {
-    $error = fopen("tmpl/error.tmpl", "r");
-    $size = filesize("tmpl/error.tmpl");
+    $error = fopen("./error.tmpl", "r");
+    $size = filesize("./error.tmpl");
     $data =  fread($error, $size);
     fclose($error);
 
