@@ -105,3 +105,7 @@ appearance: none;
     -moz-appearance: none;
     cursor: pointer;
 }
+
+.sample img{
+    width: 200px;
+}
