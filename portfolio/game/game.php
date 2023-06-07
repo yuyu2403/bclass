@@ -15,16 +15,16 @@
 <body>
     <br>
     <div class="sampleimg">
-        <div style="position:absolute; top:90px; left:250px">
+        <div style="position:absolute; top:90px; left:340px">
             <img src="../common/image/syankusu.jpg" width="320px" height="auto" alt="シャンクス">
         </div>
-        <div style="position:absolute; top:90px; right:50px">
+        <div style="position:absolute; top:90px; right:180px">
             <img src="../common/image/kurohige.jpg" width="478px" height="auto" alt="黒ひげ">
         </div>
         </br>
         <br>
-        <div style="text-align: center;position:absolute; top:400px">
-            <h2>赤髪海賊団大頭：赤髪のシャンクス 　　VS　　 最悪の世代、提督：マーシャル・D・ティーチ</h2>
+        <div style="text-align: center;position:absolute; top:400px;width: 100%;">
+            <h2>赤髪海賊団大頭：赤髪のシャンクス 　　VS　　 提督：マーシャル・D・ティーチ</h2>
 
             </br>
             <br>
