@@ -48,5 +48,5 @@ echo "<hr>";
 if ($shankusu->hp <= 0) {
     echo "本日の勝敗、、{$kurohige->name}の勝利";
 } else {
-    echo "本日の勝敗、、{$shankusu->name}の勝利";
+    echo "本日の勝敗!、、{$shankusu->name}の勝利";
 }
