@@ -17,8 +17,8 @@
 </html>
 
 <?php
-echo "one piese php編";
-echo "<hr>";
+echo "<center>one piese php編</center>";
+echo "<center><hr></center>";
 //クラスを作ってキャラクターのテンプレートを用意
 class Chara
 {
@@ -29,7 +29,7 @@ class Chara
     public $at_name2;
     public function attack1()
     {
-        echo "{$this->name}は{$this->at_name1}で攻撃！！";
+        echo "<center>{$this->name}は{$this->at_name1}で攻撃！！</center>";
     }
 
     public function __construct($name, $at_name1)
@@ -51,20 +51,20 @@ while ($shankusu->hp > 0 && $kurohige->hp > 0) {
 
     $shankusu->attack1();
     $kurohige->hp -= rand(4000, 800); //ランダムに減らす
-    echo "{$kurohige->name}の残りの体力は{$kurohige->hp}<br>"; //○○の残りの体力は○○と表示させる
+    echo "<center>{$kurohige->name}の残りの体力は{$kurohige->hp}<br></center>"; //○○の残りの体力は○○と表示させる
 
     echo "<hr>";
 
     $kurohige->attack1();
     $shankusu->hp -= rand(800, 3000); //ランダムに減らす
-    echo "{$shankusu->name}の残りの体力は{$shankusu->hp}<br>"; //○○の残りの体力は○○と表示させる
+    echo "<center>{$shankusu->name}の残りの体力は{$shankusu->hp}<br></center>"; //○○の残りの体力は○○と表示させる
 }
 
 echo "<hr>";
 
 //どちらかの体力がなくなったら勝利宣言
 if ($shankusu->hp <= 0) {
-    echo "本日の勝敗、、{$kurohige->name}の勝利!!";
+    echo "<center>本日の勝敗、、{$kurohige->name}の勝利!!</center>";
 } else {
-    echo "本日の勝敗、、{$shankusu->name}の勝利!!";
+    echo "<center>本日の勝敗、、{$shankusu->name}の勝利!!</center>";
 }
