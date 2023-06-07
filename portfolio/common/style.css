@@ -28,13 +28,13 @@ body{
 .contact-item,
 .contact-body{
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #eff8af;
 }
 
 .contact-item{
     text-align: left;
     width: 30%;
-    background-color: #eee;
+    background-color: #e9f5be;
 }
 
 .contact-body{
