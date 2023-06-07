@@ -8,6 +8,10 @@ body{
     /* background-color: #f7f7f7 */
 }
 
+.curry{
+    display: flex;
+    justify-content: center;
+}
 .contact{
     width: 960px;
     margin: 0 auto;
@@ -130,6 +134,7 @@ appearance: none;
     color: #575753;
     justify-content: space-between;
 }
+<<<<<<< HEAD
 
 .footer__navi {
     flex-wrap: wrap;
@@ -157,3 +162,5 @@ a:hover {
 .sample img{
     width: 200px;
 }
+=======
+>>>>>>> origin/tadajin
