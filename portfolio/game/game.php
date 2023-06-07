@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 <!DOCTYPE html>
 <html lang="en">
 
@@ -67,7 +64,7 @@ echo "<hr>";
 
 //どちらかの体力がなくなったら勝利宣言
 if ($shankusu->hp <= 0) {
-    echo "本日の勝敗、、{$kurohige->name}の勝利";
+    echo "本日の勝敗、、{$kurohige->name}の勝利!!";
 } else {
-    echo "本日の勝敗!、、{$shankusu->name}の勝利";
+    echo "本日の勝敗、、{$shankusu->name}の勝利!!";
 }
