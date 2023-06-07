@@ -46,39 +46,40 @@ if ($comment == "") {
 }
 
 # 分岐チェック
-if ($_POST["mode"] == "post") {
-    conf_form();
-} else if ($_POST["mode"] == "send") {
-    send_form();
-}
+// if ($_POST["mode"] == "post") {
+//     conf_form();
+// } else if ($_POST["mode"] == "send") {
+//     send_form();
+// }
 
 #-----------------------------------------------------------
 #  確認画面
 #-----------------------------------------------------------
-function conf_form()
-{
-    global $name;
-    global $gen;
-    global $email;
-    global $job;
-    global $comment;
+// function conf_form()
+// {
+//     global $name;
+//     global $gen;
+//     global $email;
+//     global $job;
+//     global $comment;
 
-    # テンプレート読み込み
-    // $conf = fopen("tmpl/conf.tmpl", "r") or die;
-    // $size = filesize("tmpl/conf.tmpl");
-    // $data = fread($conf, $size); //ファイルサイズを指定することで、全部読み込む
-    // fclose($conf);
+//     # テンプレート読み込み
+//     // $conf = fopen("tmpl/conf.tmpl", "r") or die;
+//     // $size = filesize("tmpl/conf.tmpl");
+//     // $data = fread($conf, $size); //ファイルサイズを指定することで、全部読み込む
+//     // fclose($conf);
 
-    # 文字置き換え　//ここにある！はうっかりほかのとこで使ってた場合を考慮してより区別化するための文字列
-    $data = str_replace("!name!", $name, $data); //$data の中に !name! があったら "$name に置き換え
-    $data = str_replace("!email!", $email, $data); //$data の中に !email! があったら $email に置き換える
-    $data = str_replace("!comment!", $comment, $data);
-    $data = str_replace("--hohohooi--", "サンバのリズムが聞こえるかい", $data);
-
-    # 表示
-    echo $data;
-    exit;
-}
+# 文字置き換え　//ここにある！はうっかりほかのとこで使ってた場合を考慮してより区別化するための文字列
+//     $data = str_replace("!name!", $name, $data); //$data の中に !name! があったら "$name に置き換え
+//     $data = str_replace("!email!", $email, $data); //$data の中に !email! があったら $email に置き換える
+//     $data = str_replace("!comment!", $comment, $data);
+//     // $data = str_replace("--hohohooi--", "サンバのリズムが聞こえるかい", $data);
+//     $data = str_replace("!gen!", $gen, $data);
+//     $data = str_replace("!job!", $job, $data);
+//     # 表示
+//     echo $data;
+//     exit;
+// }
 
 #-----------------------------------------------------------
 #  エラー画面
