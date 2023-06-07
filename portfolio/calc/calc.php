@@ -1,4 +1,7 @@
-<form action="dentaku.php" method="get">
+<h1>計算できるで～、数字入れて好きに計算してみて～。。。</h1>
+
+
+<form action="calc.php" method="get">
     <input type="text" name="num1" id="">
 
     <input type="radio" name="enzan" value="a">+
@@ -32,6 +35,6 @@ if ($_GET) {
             echo $num1 / $num2;
         }
     } else {
-        echo "<h1>四則演算を選択してください！！</h1>";
+        echo "<center><h1>四則演算を選択してください！！</h1></center>";
     }
 }
