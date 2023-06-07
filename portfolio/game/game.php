@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../portfolio/common/style.css">
+    <link rel="stylesheet" href="../common/style.css">
     <title>Document</title>
 </head>
 
@@ -86,6 +86,16 @@
             }
             ?>
         </div>
+
+        <footer class="footer">
+            <a href="../index.html" class="footer__return">bclass TOPページへ</a>
+            <ul class="footer__navi flex">
+                <li><a href="../calc/calc.php">電卓</a></li>
+                <li><a href="../form/form.html">フォーム</a></li>
+                <li><a href="../gacha/gacha.php">ガチャ</a></li>
+                <!-- <li><a href="../game/game.php">ゲーム</a></li> -->
+            </ul>
+        </footer>
 </body>
 
 </html>
