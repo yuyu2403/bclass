@@ -19,10 +19,12 @@
             </tr>
             <tr>
                 <th class="contact-exit">ありがとうございました。</th>
-                <form action="form.html">
-                    <input type="button" value="お問い合わせページに戻る">
-                </form>
             </tr>
+            <div>
+                <form action="form.html">
+                    <input type="button" onclick="location.href='form.html'" value="お問い合わせページに戻る">
+                </form>
+            </div>
         </table>
     </div>
 </body>
