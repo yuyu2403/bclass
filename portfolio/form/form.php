@@ -1,10 +1,4 @@
 <?php
-
-# 送信先アドレス
-// $mailto = "xxx@internetacademy.co.jp";
-# 送信後画面からの戻り先
-$toppage = "./form.html";
-
 #===========================================================
 #  入力情報の受け取りと加工
 #===========================================================
@@ -13,9 +7,32 @@ $name = $_POST["名前"];
 $email = $_POST["メール"];
 $job = $_POST["職業"];
 $comment = $_POST["お問い合わせ"];
-if (empty($_POST)) {
+
+# 入力チェック
+if ($name == "") {
+    error("名前が未入力です");
+}
+if (!empty($_POST)) {
+    if (!isset($_POST["性別"])) {
+        error("性別が未選択です");
+    }
     $gen = $_POST["性別"];
-    $skill = $_POST["スキル"];
+    if (!preg_match("/\w+@\w+/", $email)) {
+        error("メールアドレスが不正です");
+    }
+    if ($job == "選択") {
+        error("職業が未選択です");
+    }
+    if (!empty($_POST)) {
+        if (!isset($_POST["スキル"])) {
+            error("スキルが未選択です");
+        }
+        $skill = $_POST["スキル"];
+    }
+    if ($comment == "") {
+        error("コメントが未入力です");
+    }
+
 
     # 無効化
     $name  = htmlentities($name, ENT_QUOTES, "UTF-8");
@@ -32,25 +49,7 @@ if (empty($_POST)) {
     $comment = str_replace("\r", "\t", $comment);
     $comment = str_replace("\n", "\t", $comment);
 }
-# 入力チェック
-if ($name == "") {
-    error("名前が未入力です");
-}
-if ($gen == "") {
-    error("性別が未選択です");
-}
-if (!preg_match("/\w+@\w+/", $email)) {
-    error("メールアドレスが不正です");
-}
-if ($job == "選択") {
-    error("職業が未選択です");
-}
-if ($skill == "") {
-    error("スキルが未入力です");
-}
-if ($comment == "") {
-    error("コメントが未入力です");
-}
+
 
 # 分岐チェック
 // if ($_POST["mode"] == "post") {
@@ -93,8 +92,8 @@ if ($comment == "") {
 #-----------------------------------------------------------
 function error($msg)
 {
-    $error = fopen("./error.tmpl", "r");
-    $size = filesize("./error.tmpl");
+    $error = fopen("error.tmpl", "r");
+    $size = filesize("error.tmpl");
     $data =  fread($error, $size);
     fclose($error);
 
@@ -105,34 +104,3 @@ function error($msg)
     echo $data;
     exit;
 }
-
-#-----------------------------------------------------------
-#  CSV書込
-#-----------------------------------------------------------
-// function send_form()
-// {
-//     global $name;
-//     global $email;
-//     global $comment;
-
-//     $user_input = array($name, $email, $comment); //配列を用意
-//     mb_convert_variables("SJIS", "UTF-8", $user_input); //配列データをまとめて文字コード変換
-//     $fh = fopen("user.csv", "a"); //追記書き込みモードでオープン
-//     flock($fh, LOCK_EX);
-//     fputcsv($fh, $user_input); //配列データをカンマ区切りで保存する命令
-//     flock($fh, LOCK_UN); //ロックを解除して
-//     fclose($fh); //ファイルを閉じる。書き込み完了
-
-//     # テンプレート読み込み
-//     $conf = fopen("tmpl/send.tmpl", "r") or die;
-//     $size = filesize("tmpl/send.tmpl");
-//     $data = fread($conf, $size);
-//     fclose($conf);
-
-//     #文字置き換え
-//     global $toppage;
-//     $data = str_replace("!top!", $toppage, $data);
-//     #表示
-//     echo $data;
-//     exit;
-// }
