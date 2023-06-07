@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +15,7 @@
 </body>
 
 </html>
->>>>>>> origin/tadajin
+
 <?php
 echo "one piese php編";
 echo "<hr>";
