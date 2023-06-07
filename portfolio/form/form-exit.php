@@ -23,6 +23,7 @@
                     <input type="button" value="お問い合わせページに戻る">
                 </form>
             </tr>
+        </table>
     </div>
 </body>
 
