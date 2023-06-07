@@ -9,6 +9,7 @@
 </head>
 
 <body>
+
     <form action="game.php">
         <input type="submit" name="gacha" value="戦闘開始">
     </form>

@@ -2,8 +2,9 @@
 
 
 <form action="calc.php" method="get">
-    <input type="text" name="num1" id="">
 
+    <input type="text" name="num1" id="">
+    </div>
     <input type="radio" name="enzan" value="a">+
     <input type="radio" name="enzan" value="b">-
     <input type="radio" name="enzan" value="c">*
