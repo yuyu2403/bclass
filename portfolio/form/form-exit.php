@@ -21,12 +21,22 @@
                 <th class="contact-exit">ありがとうございました。</th>
             </tr>
             <div>
-                <form action="form.html">
+                <form>
                     <input type="button" onclick="location.href='form.html'" value="お問い合わせページに戻る">
                 </form>
             </div>
         </table>
     </div>
+    <footer class="footer">
+        <a href="../index.html" class="footer__return">bclass TOPページへ</a>
+        <ul class="footer__navi flex">
+            <li><a href="../calc/calc.php">電卓</a></li>
+            <!-- <li><a href="../form/form.html">フォーム</a></li> -->
+            <li><a href="../gacha/gacha.php">ガチャ</a></li>
+            <li><a href="../game/game.php">ゲーム</a></li>
+        </ul>
+    </footer>
+
 </body>
 
 </html>

@@ -1,3 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>送信中</title>
+    <meta http-equiv="refresh" content="3;url=form-exit.php">
+</head>
+
+<body>
+    数秒後に送信完了します
+</body>
+
+</html>
+
 <?php
 #===========================================================
 #  入力情報の受け取りと加工
