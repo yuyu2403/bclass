@@ -1,18 +1,41 @@
 <h1>計算できるで～、数字入れて好きに計算してみて～。。。</h1>
 
+<!DOCTYPE html>
+<html lang="en">
 
-<form action="calc.php" method="get">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 
-    <input type="text" name="num1" id="">
-    </div>
-    <input type="radio" name="enzan" value="a">+
-    <input type="radio" name="enzan" value="b">-
-    <input type="radio" name="enzan" value="c">*
-    <input type="radio" name="enzan" value="d">/
+<body>
+    <form action="calc.php" method="get">
 
-    <input type="text" name="num2" id="">
-    <input type="submit" value="計算">
-</form>
+        <input type="text" name="num1" id="">
+        </div>
+        <input type="radio" name="enzan" value="a">+
+        <input type="radio" name="enzan" value="b">-
+        <input type="radio" name="enzan" value="c">*
+        <input type="radio" name="enzan" value="d">/
+
+        <input type="text" name="num2" id="">
+        <input type="submit" value="計算">
+    </form>
+
+</body>
+<footer class="footer">
+    <a href="../index.html" class="footer__return">bclass TOPページへ</a>
+    <ul class="footer__navi flex">
+        <!-- <li><a href="../calc/calc.php">電卓</a></li> -->
+        <li><a href="../form/form.html">フォーム</a></li>
+        <li><a href="../gacha/gacha.php">ガチャ</a></li>
+        <li><a href="../game/game.php">ゲーム</a></li>
+    </ul>
+</footer>
+
+</html>
 
 <?php
 if ($_GET) {
