@@ -8,6 +8,10 @@ body{
     /* background-color: #f7f7f7 */
 }
 
+.curry{
+    display: flex;
+    justify-content: center;
+}
 .contact{
     width: 960px;
     margin: 0 auto;
