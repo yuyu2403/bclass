@@ -3,8 +3,9 @@
 }
 
 body{
-    color: #333;
+    color: #575753;
     font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    /* background-color: #f7f7f7 */
 }
 
 .contact{
@@ -28,7 +29,7 @@ body{
 .contact-item,
 .contact-body{
     padding: 20px;
-    border: 1px solid #eff8af;
+    border: 1px solid #575753;
 }
 
 .contact-item{
@@ -105,15 +106,54 @@ appearance: none;
     -moz-appearance: none;
     cursor: pointer;
 }
+.contact-submit:hover{
+    width: 250px;
+    background-color: #e9f5be;
+    color: #333;
+    font-weight: bold;
+    display: block;
+    margin: 0 auto;
+    font-size: 16px;
+    padding: 15px;
+    border-radius: 100vh;
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
 
 .footer{
     font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
     padding: 2rem;
     font-size: 15px;
-    color: #999;
-    background: #fff;
-    border-top: 1px solid #e5e7eb;
+    color: #575753;
+    justify-content: space-between;
 }
+
+.footer__navi {
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.footer__navi li {
+    display: inline-block;
+}
+
+.footer__navi li:not(:last-child) {
+    margin-right: 16px;
+}
+
+.footer__return {
+    display: inline-block;
+    margin-bottom: 1rem;
+
+}
+
+a:hover {
+  color: #f3d458;
+}
+
 .sample img{
     width: 200px;
 }
